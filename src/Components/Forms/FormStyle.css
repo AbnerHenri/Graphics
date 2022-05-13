@@ -1,3 +1,9 @@
 .Forms {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width : 45%;
+    height : 95vh;
+
+    margin-top : 15px;
 }

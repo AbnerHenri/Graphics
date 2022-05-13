@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './FormStyle.css'
 
 import { GraphicContext } from '../../Contexts/GraphicContext'
+import Statistcs from '../Statistcs/Statistic';
 
 function Forms() {
 
@@ -11,7 +12,9 @@ function Forms() {
 
   return(
       <div className='Forms'>
-        
+          <Statistcs title={'Media 1'}/>
+          <Statistcs title={'Media 2'}/>
+          <Statistcs title={'Media 3'}/>
       </div>
   )
 }
