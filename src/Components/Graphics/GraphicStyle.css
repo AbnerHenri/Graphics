@@ -1,0 +1,7 @@
+.Graphic {
+    float: right;
+    width : 40vw;
+    height : 50vh;
+
+    border: 1px solid white;
+}

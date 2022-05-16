@@ -5,7 +5,7 @@ import './GraphicStyle.css'
 
 function Graphic() {
   return(
-      <div>
+      <div className='Graphic'>
           
       </div>
   )

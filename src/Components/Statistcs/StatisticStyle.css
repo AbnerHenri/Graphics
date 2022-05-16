@@ -1,3 +1,10 @@
+:root {
+    --color_one : #1b181a;
+    --color_two : #F5F3F4;
+    --color_three : #A4161A;
+    --color_for : #E5383B;
+}
+
 .Card {
     display : flex;
     flex-direction: column;
@@ -8,27 +15,38 @@
     height: 30%;
     margin : 15px;
 
-    background-color: white;
+    background-color: var(--color_two);
+}
+
+.InpRadio {
+    display: none;
+}
+
+.InpRadio:checked + .CheckboxWrapper label{
+    background-color: var(--color_for);
+    position : relative;
+    bottom: 25px;
+}
+
+.Buttons {
+    display: flex;
+    position: relative;
+    bottom : 20px;
 }
 
 .Btn {
-    font-size: 1.5rem;
-    padding : 0.6rem 1rem;
-    margin : 15px 0.3rem 30px 0.3rem;
-    cursor : pointer;
-
+    color : var(--color_two);
+    background-color: var(--color_three);
     border-radius: 50%;
-    transition-duration: 500ms;
-}
 
-.Btn:hover {
-    transform: translate(0px, -20px);
+    cursor: pointer;
+    padding : 10px 15px;
+    margin : 5px;
+    margin-bottom : 25px;
 }
-
 
 .Title {
     margin: 1.8rem;
-
     font-size: 1.7rem;
 }
 
