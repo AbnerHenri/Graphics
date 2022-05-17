@@ -1,7 +1,11 @@
 .Graphic {
     float: right;
-    width : 40vw;
-    height : 50vh;
+    width : 50vw;
+    height : 70vh;
+    margin : 30px;
 
-    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
 }

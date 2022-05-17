@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './StatisticStyle.css'
 
+import { GraphicContext } from '../../Contexts/GraphicContext'
+
 function Statistcs(props) {
+
+  const {setMedia1} = useContext(GraphicContext)
+  const {setMedia2} = useContext(GraphicContext)
+  const {setMedia3} = useContext(GraphicContext)
 
   const Data = [
     {name : props.name, id : 'Radio' + props.id[0], number : 1},
@@ -15,7 +21,24 @@ function Statistcs(props) {
     {name : props.name, id : 'Radio' + props.id[8], number : 9},
   ]
 
-  console.log(Data[0].id)
+  function setData(name, value){
+    switch (name) {
+      case 'FirstCard' :
+        setMedia1(value)
+        break;
+
+      case 'SecondCard' : 
+        setMedia2(value)
+        break;
+
+      case 'ThirdCard' : 
+        setMedia3(value)
+        break;
+    
+      default:
+        return { name, value }
+    }
+  }
 
   return(
       <div className='Card'>
@@ -27,7 +50,7 @@ function Statistcs(props) {
                 <input type={'radio'} className='InpRadio' name={e.name} id={e.id} />
 
                 <div className='CheckboxWrapper'>
-                  <label for={e.id} className='Btn'>{e.number}</label>
+                  <label for={e.id} className='Btn' onClick={(e)=> setData(props.name, e.target.textContent) }>{e.number}</label>
                 </div>
               </>
             )}
